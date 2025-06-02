@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 # Copyright (c) 2020 Georgios Verigakis <verigak@gmail.com>
 #
 # Permission to use, copy, modify, and distribute this software for any

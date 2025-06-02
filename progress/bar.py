@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 # Copyright (c) 2012 Georgios Verigakis <verigak@gmail.com>
 #
 # Permission to use, copy, modify, and distribute this software for any
@@ -14,7 +12,6 @@
 # ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 # OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
-from __future__ import unicode_literals
 
 import sys
 
@@ -64,7 +61,7 @@ class FillingCirclesBar(ChargingBar):
 
 class IncrementalBar(Bar):
     if sys.platform.startswith('win'):
-        phases = (u' ', u'▌', u'█')
+        phases = (' ', '▌', '█')
     else:
         phases = (' ', '▏', '▎', '▍', '▌', '▋', '▊', '▉', '█')
 

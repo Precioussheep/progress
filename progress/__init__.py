@@ -12,7 +12,6 @@
 # ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 # OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
-from __future__ import division, print_function
 
 from collections import deque
 from datetime import timedelta
@@ -24,13 +23,13 @@ except ImportError:
     from time import time as monotonic
 
 
-__version__ = '1.6.1'
+__version__ = '1.6.2'
 
 HIDE_CURSOR = '\x1b[?25l'
 SHOW_CURSOR = '\x1b[?25h'
 
 
-class Infinite(object):
+class Infinite:
     file = stderr
     sma_window = 10         # Simple Moving Average window
     check_tty = True
@@ -142,7 +141,7 @@ class Infinite(object):
 
 class Progress(Infinite):
     def __init__(self, *args, **kwargs):
-        super(Progress, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.max = kwargs.get('max', 100)
 
     @property
